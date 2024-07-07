@@ -19,11 +19,11 @@ from fairscale.nn.model_parallel.layers import (
 
 @dataclass
 class ModelArgs:
-    dim: int = 4096
-    n_layers: int = 32
-    n_heads: int = 32
+    dim: int = 1024
+    n_layers: int = 2
+    n_heads: int = 4
     n_kv_heads: Optional[int] = None
-    vocab_size: int = -1
+    vocab_size: int = 1024
     multiple_of: int = 256  # make SwiGLU hidden layer size multiple of large power of 2
     ffn_dim_multiplier: Optional[float] = None
     norm_eps: float = 1e-5
